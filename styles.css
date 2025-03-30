@@ -1,0 +1,103 @@
+    /* CSS Custom Properties for easy theme updates */
+    :root {
+        --primary-bg: #333;
+        --secondary-bg: #444;
+        --primary-color: #fff;
+        --text-color: #333;
+        --content-bg: #fff;
+        --accent: #f4f4f4;
+        --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+  
+      /* Reset & Base Styles */
+      *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 16px;
+      }
+      body {
+        font-family: var(--font-family);
+        line-height: 1.6;
+        background-color: var(--accent);
+        color: var(--text-color);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+  
+      /* Header */
+      header {
+        background-color: var(--primary-bg);
+        color: var(--primary-color);
+        text-align: center;
+        padding: 1rem;
+      }
+  
+      /* Navigation */
+      nav {
+        background-color: var(--secondary-bg);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        flex-wrap: wrap;
+      }
+      nav li {
+        margin: 0.5rem 1rem;
+      }
+      nav a {
+        font-weight: bold;
+        padding: 0.5rem;
+        transition: color 0.3s ease;
+      }
+      nav a:hover,
+      nav a:focus {
+        text-decoration: underline;
+        outline: none;
+      }
+  
+      /* Main Content Container */
+      main {
+        flex: 1;
+        max-width: 1200px;
+        width: 100%;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      .content-section {
+        background-color: var(--content-bg);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+      }
+      .content-section h2 {
+        margin-bottom: 1rem;
+      }
+  
+      /* Footer */
+      footer {
+        background-color: var(--primary-bg);
+        color: var(--primary-color);
+        text-align: center;
+        padding: 1rem;
+      }
+  
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+        nav li {
+          margin: 0.5rem 0;
+        }
+      }
